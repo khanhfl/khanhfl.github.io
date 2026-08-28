@@ -297,3 +297,22 @@ a { color: inherit; }
   font-size: 0.85rem;
   font-style: normal;
 }
+
+.headshot {
+  float: right;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 0 16px 32px;
+  shape-outside: circle(50%);
+}
+
+.intro::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 560px) {
+  .headshot { float: none; display: block; margin: 0 auto 20px; }
+}

@@ -1,11 +1,10 @@
-// Dark mode toggle. Remembers preference in localStorage; falls back to
-// system preference on first visit.
+// Dark mode toggle. Remembers a visitor's choice in localStorage;
+// defaults to light mode until they toggle it themselves.
 (function () {
   const root = document.documentElement;
   const toggle = document.getElementById('themeToggle');
   const stored = safeGet('theme');
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initial = stored || (systemDark ? 'dark' : 'light');
+  const initial = stored || 'light';
 
   applyTheme(initial);
 
