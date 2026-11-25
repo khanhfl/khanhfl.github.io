@@ -126,6 +126,10 @@ a { color: inherit; }
   font-size: 1.02rem;
 }
 
+.intro p.cta-row {
+  margin-top: 8px;
+}
+
 .intro strong { font-weight: 600; }
 
 /* Links row */
